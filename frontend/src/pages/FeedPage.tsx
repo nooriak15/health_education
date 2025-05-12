@@ -1,12 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import PostCard from '../components/PostCard';
-import DragZone from '../components/DragZone';
 
 const FeedPage: React.FC = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [totalAttempts, setTotalAttempts] = useState(0);
+  const [correctAnswers, setCorrectAnswers] = useState(0);
+
+  const updateScore = (isCorrect: boolean) => {
+    setTotalAttempts((prev) => prev + 1);
+    if (isCorrect) {
+      setCorrectAnswers((prev) => prev + 1);
+    }
+  };
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -23,6 +31,9 @@ const FeedPage: React.FC = () => {
 
     fetchPosts();
   }, []);
+
+  const scorePercentage =
+    totalAttempts > 0 ? Math.round((correctAnswers / totalAttempts) * 100) : 0;
 
   if (loading) {
     return (
@@ -41,30 +52,24 @@ const FeedPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100">
-      <div className="max-w-4xl mx-auto py-8 space-y-8">
+    <div className="min-h-screen bg-gray-100 relative">
+      {/* Floating Score Box */}
+      <div className="fixed bottom-4 right-4 z-50 bg-blue-500 text-white w-40 h-40 flex flex-col items-center justify-center rounded-full shadow-lg">
+        <p className="text-xl font-bold">Score:</p>
+        <p className="text-2xl font-bold">{scorePercentage}%</p>
+        <p className="text-sm font-medium">{correctAnswers}/{totalAttempts}</p>
+      </div>
+
+      {/* Content Section */}
+      <div className="max-w-4xl mx-auto pt-8 pb-8 space-y-8">
         {posts.map((post) => (
-          <div key={post.id} className="post">
-            <PostCard
-              id={post.id}
-              image_url={post.image_url}
-              claims={post.claims}
-            />
-            <div className="flex space-x-4 mt-4">
-              <DragZone
-                zoneType="red-flag"
-                onDrop={(item) => console.log('Dropped on Red Flag:', item)}
-              />
-              <DragZone
-                zoneType="neutral-flag"
-                onDrop={(item) => console.log('Dropped on Neutral Flag:', item)}
-              />
-              <DragZone
-                zoneType="green-flag"
-                onDrop={(item) => console.log('Dropped on Green Flag:', item)}
-              />
-            </div>
-          </div>
+          <PostCard
+            key={post.id}
+            id={post.id}
+            image_url={post.image_url}
+            claims={post.claims}
+            updateScore={updateScore}
+          />
         ))}
       </div>
     </div>
