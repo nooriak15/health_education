@@ -21,7 +21,13 @@ const NavBar = () => {
                 to="/feed"
                 className={`inline-flex items-center px-1 pt-1 ${isActive('/feed')}`}
               >
-                Feed
+                Quiz
+              </Link>
+              <Link
+                to="/learn"
+                className={`inline-flex items-center px-1 pt-1 ${isActive('/learn')}`}
+              >
+                Learn
               </Link>
               <Link
                 to="/about"
