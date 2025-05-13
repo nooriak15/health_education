@@ -5,16 +5,24 @@ const PostCard: React.FC<{
   id: number;
   image_url: string;
   claims: any[];
-  updateScore: (isCorrect: boolean) => void; // Add updateScore prop
+  updateScore: (isCorrect: boolean) => void;
 }> = ({ id, image_url, claims, updateScore }) => {
   const [droppedItems, setDroppedItems] = useState<Record<string, string>>({});
   const [showEvaluation, setShowEvaluation] = useState(false);
 
   const handleDrop = (item: any, zoneType: string) => {
     if (droppedItems[item.text]) return; // Prevent dragging the same item more than once
-    setDroppedItems((prev) => ({ ...prev, [item.text]: zoneType }));
+
+    const mappedZoneType = {
+      'red-flag': 'red',
+      'neutral-flag': 'neutral',
+      'green-flag': 'green',
+    }[zoneType];
+
     const correctZone = claims[0].phrases.find((phrase) => phrase.text === item.text)?.flag;
-    updateScore(zoneType === correctZone); // Notify FeedPage
+
+    setDroppedItems((prev) => ({ ...prev, [item.text]: mappedZoneType }));
+    updateScore(mappedZoneType === correctZone); // Notify FeedPage
   };
 
   const evaluateResults = () => {
@@ -49,7 +57,6 @@ const PostCard: React.FC<{
             draggable={!droppedItems[phrase.text]}
             onDragStart={(e) => {
               const dragData = JSON.stringify(phrase);
-              console.log('Dragging:', dragData); // Debugging
               e.dataTransfer.setData('text', dragData);
             }}
             className={`p-2 border rounded-md bg-gray-50 shadow ${
@@ -63,17 +70,17 @@ const PostCard: React.FC<{
       <div className="flex space-x-4 mt-4">
         <div className="flex-1">
           <DragZone zoneType="red-flag" onDrop={handleDrop}>
-            {renderDroppedItems('red-flag')}
+            {renderDroppedItems('red')}
           </DragZone>
         </div>
         <div className="flex-1">
           <DragZone zoneType="neutral-flag" onDrop={handleDrop}>
-            {renderDroppedItems('neutral-flag')}
+            {renderDroppedItems('neutral')}
           </DragZone>
         </div>
         <div className="flex-1">
           <DragZone zoneType="green-flag" onDrop={handleDrop}>
-            {renderDroppedItems('green-flag')}
+            {renderDroppedItems('green')}
           </DragZone>
         </div>
       </div>
