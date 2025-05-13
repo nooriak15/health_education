@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import PostCard from '../components/PostCard';
+import { Link } from 'react-router-dom';
 
 const FeedPage: React.FC = () => {
   const [posts, setPosts] = useState([]);
@@ -58,6 +59,16 @@ const FeedPage: React.FC = () => {
         <p className="text-xl font-bold">Score:</p>
         <p className="text-2xl font-bold">{scorePercentage}%</p>
         <p className="text-sm font-medium">{correctAnswers}/{totalAttempts}</p>
+      </div>
+
+      {/* Refresh Learning Button */}
+      <div className="fixed top-20 right-4 z-50">
+        <Link
+          to="/learn"
+          className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-sm"
+        >
+          Refresh Your Learning
+        </Link>
       </div>
 
       {/* Content Section */}
