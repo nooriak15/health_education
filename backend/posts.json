@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Claim+1",
+        "image_url": "https://raw.githubusercontent.com/nooriak15/health_education/refs/heads/main/frontend/public/post-1.png",
         "interaction_type": "drag_drop",
         "claims": [
             {
@@ -9,33 +9,33 @@
                 "phrases": [
                     {
                         "text": "Flush belly fat overnight",
-                        "flag": "red-flag",
-                        "explanation": "This is a red flag because it promises a specific outcome within a short timeframe, which contradicts known biological processes of fat loss. (Rules 2, 10)",
-                        "correct_feedback": "Correct! Rapid fat loss claims are unsupported and misleading.",
-                        "incorrect_feedback": "Incorrect. This is a red flag due to its unrealistic timeframe."
+                        "flag": "red",
+                        "explanation": "This is a red flag because it promises a specific outcome in a short timeframe (Rule 2, 10).",
+                        "correct_feedback": "Correct! This is a red flag due to its exaggerated and unrealistic claim.",
+                        "incorrect_feedback": "Incorrect. This is a red flag because it promises unrealistic results."
                     },
                     {
                         "text": "secret herbal tonic",
-                        "flag": "red-flag",
-                        "explanation": "This is a red flag because it relies on secrecy and appeals to tradition without evidence. (Rule 6)",
-                        "correct_feedback": "Correct! Claims about secret products are often unsupported.",
-                        "incorrect_feedback": "Incorrect. This is a red flag for its appeal to secrecy."
+                        "flag": "red",
+                        "explanation": "This is a red flag because it appeals to secrecy without evidence (Rule 6).",
+                        "correct_feedback": "Correct! This is a red flag due to its appeal to secrecy.",
+                        "incorrect_feedback": "Incorrect. This is a red flag because it lacks evidence."
                     },
                     {
                         "text": "featured in Wellness Weekly",
-                        "flag": "neutral-flag",
-                        "explanation": "This is neutral as it mentions a source but does not provide evaluative content. (Source mention, not evaluative)",
-                        "correct_feedback": "Correct! This is a neutral statement.",
+                        "flag": "neutral",
+                        "explanation": "This is a neutral statement as it is merely a source mention and not evaluative.",
+                        "correct_feedback": "Correct! This is a neutral statement with no evaluative content.",
                         "incorrect_feedback": "Incorrect. This is a neutral statement."
                     }
                 ],
-                "explanation": "Claims about rapid weight loss and secret products are often misleading, even if a source is mentioned."
+                "explanation": "This statement contains exaggerated promises and appeals to secrecy, but the source mention is neutral."
             }
         ]
     },
     {
         "id": 2,
-        "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Claim+2",
+        "image_url": "https://raw.githubusercontent.com/nooriak15/health_education/refs/heads/main/frontend/public/post-2.png",
         "interaction_type": "drag_drop",
         "claims": [
             {
@@ -43,33 +43,33 @@
                 "phrases": [
                     {
                         "text": "Resistance training helps improve insulin sensitivity",
-                        "flag": "green-flag",
-                        "explanation": "This is a green flag because it describes a specific, evidence-based biological mechanism. (Rule 1)",
-                        "correct_feedback": "Correct! This is an evidence-based statement.",
-                        "incorrect_feedback": "Incorrect. This is a green flag because it is scientifically supported."
+                        "flag": "green",
+                        "explanation": "This is a green flag because it specifies a mechanism supported by evidence (Rule 1).",
+                        "correct_feedback": "Correct! This is a green flag because it is specific and evidence-based.",
+                        "incorrect_feedback": "Incorrect. This is a green flag due to its specificity and evidence."
                     },
                     {
                         "text": "over time",
-                        "flag": "green-flag",
-                        "explanation": "This is a green flag as it emphasizes gradual change, which aligns with biological processes. (Rule 11)",
-                        "correct_feedback": "Correct! Gradual improvements are realistic and evidence-based.",
-                        "incorrect_feedback": "Incorrect. This is a green flag."
+                        "flag": "green",
+                        "explanation": "This is a green flag because it acknowledges gradual improvement (Rule 11).",
+                        "correct_feedback": "Correct! This is a green flag because it emphasizes gradual change.",
+                        "incorrect_feedback": "Incorrect. This is a green flag because it highlights realistic progress."
                     },
                     {
                         "text": "consistent nutrition",
-                        "flag": "neutral-flag",
-                        "explanation": "This is neutral because it is vague but not misleading. (Neutral – vague but not misleading)",
-                        "correct_feedback": "Correct! This is a neutral statement.",
+                        "flag": "neutral",
+                        "explanation": "This is neutral because it is vague but not misleading.",
+                        "correct_feedback": "Correct! This is a neutral statement as it is not inherently misleading.",
                         "incorrect_feedback": "Incorrect. This is a neutral statement."
                     }
                 ],
-                "explanation": "The statement highlights evidence-based benefits of resistance training and gradual improvements."
+                "explanation": "This statement emphasizes evidence-based mechanisms and gradual improvement while being vague about nutrition."
             }
         ]
     },
     {
         "id": 3,
-        "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Claim+3",
+        "image_url": "https://raw.githubusercontent.com/nooriak15/health_education/refs/heads/main/frontend/public/post-3.png",
         "interaction_type": "drag_drop",
         "claims": [
             {
@@ -77,26 +77,26 @@
                 "phrases": [
                     {
                         "text": "one mushroom cured my anxiety forever",
-                        "flag": "red-flag",
-                        "explanation": "This is a red flag because it suggests a single product can cure a mental health condition, which is an overgeneralized and unsupported claim. (Rules 7, 9)",
-                        "correct_feedback": "Correct! Overgeneralized cure claims are misleading.",
-                        "incorrect_feedback": "Incorrect. This is a red flag because it lacks evidence."
+                        "flag": "red",
+                        "explanation": "This is a red flag because it suggests a single ingredient can cure a complex mental health condition (Rule 7, 9).",
+                        "correct_feedback": "Correct! This is a red flag due to its oversimplified and unsupported claim.",
+                        "incorrect_feedback": "Incorrect. This is a red flag because it is unrealistic and unsupported."
                     },
                     {
                         "text": "I also started meditating more",
-                        "flag": "neutral-flag",
-                        "explanation": "This is neutral as it describes a supplemental behavior without making a health claim. (Neutral – supplemental behavior, not inherently misleading)",
-                        "correct_feedback": "Correct! This is a neutral statement.",
+                        "flag": "neutral",
+                        "explanation": "This is neutral as it is a supplemental behavior and not inherently misleading.",
+                        "correct_feedback": "Correct! This is a neutral statement that adds context without making a claim.",
                         "incorrect_feedback": "Incorrect. This is a neutral statement."
                     }
                 ],
-                "explanation": "Claims about curing anxiety are unsupported, but meditation is a plausible supplemental behavior."
+                "explanation": "This statement contains a red flag for oversimplified cure claims but neutral context for supplemental behaviors."
             }
         ]
     },
     {
         "id": 4,
-        "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Claim+4",
+        "image_url": "https://raw.githubusercontent.com/nooriak15/health_education/refs/heads/main/frontend/public/post-4.png",
         "interaction_type": "drag_drop",
         "claims": [
             {
@@ -104,33 +104,33 @@
                 "phrases": [
                     {
                         "text": "Used for centuries",
-                        "flag": "red-flag",
-                        "explanation": "This is a red flag as it relies on appeals to tradition without evidence. (Rule 6)",
-                        "correct_feedback": "Correct! Appeals to tradition are not necessarily evidence-based.",
-                        "incorrect_feedback": "Incorrect. This is a red flag because it relies on tradition."
-                    },
-                    {
-                        "text": "acupuncture is still debated today",
-                        "flag": "green-flag",
-                        "explanation": "This is a green flag because it acknowledges the complexity and debate around acupuncture. (Rule 3)",
-                        "correct_feedback": "Correct! Acknowledging debate indicates thoughtful evaluation.",
-                        "incorrect_feedback": "Incorrect. This is a green flag for presenting a balanced view."
+                        "flag": "red",
+                        "explanation": "This is a red flag because it appeals to tradition without evidence (Rule 6).",
+                        "correct_feedback": "Correct! This is a red flag due to its appeal to tradition without evidence.",
+                        "incorrect_feedback": "Incorrect. This is a red flag because it lacks supporting evidence."
                     },
                     {
                         "text": "Some say it helps them relax",
-                        "flag": "neutral-flag",
-                        "explanation": "This is neutral as it describes anecdotal experiences without making health claims. (Neutral – anecdotal, vague, but not false)",
-                        "correct_feedback": "Correct! This is a neutral statement.",
+                        "flag": "neutral",
+                        "explanation": "This is neutral as it is anecdotal and vague but not false.",
+                        "correct_feedback": "Correct! This is a neutral statement due to its anecdotal nature.",
                         "incorrect_feedback": "Incorrect. This is a neutral statement."
+                    },
+                    {
+                        "text": "acupuncture is still debated today",
+                        "flag": "green",
+                        "explanation": "This is a green flag because it acknowledges complexity and debate (Rule 3).",
+                        "correct_feedback": "Correct! This is a green flag for acknowledging complexity.",
+                        "incorrect_feedback": "Incorrect. This is a green flag because it promotes balanced understanding."
                     }
                 ],
-                "explanation": "Acknowledging debate about acupuncture is thoughtful, but appeals to tradition are misleading."
+                "explanation": "This statement includes appeals to tradition, vague anecdotes, and balanced acknowledgment of complexity."
             }
         ]
     },
     {
         "id": 5,
-        "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Claim+5",
+        "image_url": "https://raw.githubusercontent.com/nooriak15/health_education/refs/heads/main/frontend/public/post-5.png",
         "interaction_type": "drag_drop",
         "claims": [
             {
@@ -138,33 +138,33 @@
                 "phrases": [
                     {
                         "text": "fixing my gut made everything better",
-                        "flag": "red-flag",
-                        "explanation": "This is a red flag due to its overgeneralized claim that one factor resolved complex issues. (Rule 7)",
-                        "correct_feedback": "Correct! Exaggerated claims about gut health are misleading.",
-                        "incorrect_feedback": "Incorrect. This is a red flag due to its overstatement."
+                        "flag": "red",
+                        "explanation": "This is a red flag because it makes an overstatement about gut health (Rule 7).",
+                        "correct_feedback": "Correct! This is a red flag due to its exaggerated claim.",
+                        "incorrect_feedback": "Incorrect. This is a red flag because it is an overstatement."
                     },
                     {
                         "text": "Therapy didn’t work for me",
-                        "flag": "neutral-flag",
-                        "explanation": "This is neutral as it describes a personal story without generalizing. (Neutral – personal story, not generalized)",
-                        "correct_feedback": "Correct! This is a neutral statement.",
+                        "flag": "neutral",
+                        "explanation": "This is neutral as it is a personal story and not generalized.",
+                        "correct_feedback": "Correct! This is a neutral statement as it is a personal experience.",
                         "incorrect_feedback": "Incorrect. This is a neutral statement."
                     },
                     {
                         "text": "I also joined a support group",
-                        "flag": "green-flag",
-                        "explanation": "This is a green flag as it promotes seeking social and professional support. (Rule 8)",
-                        "correct_feedback": "Correct! Joining a support group is constructive behavior.",
-                        "incorrect_feedback": "Incorrect. This is a green flag."
+                        "flag": "green",
+                        "explanation": "This is a green flag as it promotes seeking support and does not discourage professional help (Rule 8).",
+                        "correct_feedback": "Correct! This is a green flag as it encourages supportive behavior.",
+                        "incorrect_feedback": "Incorrect. This is a green flag because it promotes seeking help."
                     }
                 ],
-                "explanation": "Exaggerated claims about gut health are misleading, but joining support groups is beneficial."
+                "explanation": "This statement includes overstatements, personal experiences, and encouragement of support-seeking behavior."
             }
         ]
     },
     {
         "id": 6,
-        "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Claim+6",
+        "image_url": "https://raw.githubusercontent.com/nooriak15/health_education/refs/heads/main/frontend/public/post-6.png",
         "interaction_type": "drag_drop",
         "claims": [
             {
@@ -172,26 +172,26 @@
                 "phrases": [
                     {
                         "text": "support skin health by promoting fibroblast activity",
-                        "flag": "green-flag",
-                        "explanation": "This is a green flag because it includes a specific, evidence-based biological mechanism. (Rule 1 – biological mechanism)",
-                        "correct_feedback": "Correct! This is an evidence-based claim.",
-                        "incorrect_feedback": "Incorrect. This is a green flag because it is scientifically supported."
+                        "flag": "green",
+                        "explanation": "This is a green flag because it specifies a biological mechanism (Rule 1).",
+                        "correct_feedback": "Correct! This is a green flag because it provides an evidence-based mechanism.",
+                        "incorrect_feedback": "Incorrect. This is a green flag due to its specific and evidence-based claim."
                     },
                     {
                         "text": "Many users enjoy the taste",
-                        "flag": "neutral-flag",
-                        "explanation": "This is neutral as it reflects subjective preference rather than a health claim. (Neutral – not a health claim)",
-                        "correct_feedback": "Correct! This is a neutral statement.",
-                        "incorrect_feedback": "Incorrect. This is a neutral statement."
+                        "flag": "neutral",
+                        "explanation": "This is neutral because it is not a health claim.",
+                        "correct_feedback": "Correct! This is a neutral statement because it is subjective and not misleading.",
+                        "incorrect_feedback": "Incorrect. This is a neutral statement as it is not a health claim."
                     }
                 ],
-                "explanation": "While collagen supplements may support skin health, taste preference is subjective and unrelated to health benefits."
+                "explanation": "This statement includes an evidence-based mechanism and a subjective opinion, which is neutral."
             }
         ]
     },
     {
         "id": 7,
-        "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Claim+7",
+        "image_url": "https://raw.githubusercontent.com/nooriak15/health_education/refs/heads/main/frontend/public/post-7.png",
         "interaction_type": "drag_drop",
         "claims": [
             {
@@ -199,26 +199,26 @@
                 "phrases": [
                     {
                         "text": "keeps hormones in check",
-                        "flag": "red-flag",
-                        "explanation": "This is a red flag because it oversimplifies the relationship between diet and hormonal health. (Rule 9 – oversimplified cure claim)",
-                        "correct_feedback": "Correct! Oversimplified cure claims are often misleading.",
-                        "incorrect_feedback": "Incorrect. This is a red flag due to lack of evidence."
+                        "flag": "red",
+                        "explanation": "This is a red flag because it oversimplifies a cure claim (Rule 9).",
+                        "correct_feedback": "Correct! This is a red flag due to its oversimplified and unsupported claim.",
+                        "incorrect_feedback": "Incorrect. This is a red flag because it exaggerates health effects."
                     },
                     {
                         "text": "I sprinkle them on my oatmeal",
-                        "flag": "neutral-flag",
-                        "explanation": "This is neutral as it describes a behavior without making a health claim. (Neutral – behavior description)",
-                        "correct_feedback": "Correct! This is a neutral statement.",
-                        "incorrect_feedback": "Incorrect. This is a neutral statement."
+                        "flag": "neutral",
+                        "explanation": "This is neutral as it describes a behavior and does not make a health claim.",
+                        "correct_feedback": "Correct! This is a neutral statement as it is a simple behavior description.",
+                        "incorrect_feedback": "Incorrect. This is a neutral statement because it is not a health claim."
                     }
                 ],
-                "explanation": "Chia seeds may be a healthy addition to a diet, but claims about regulating hormones are exaggerated."
+                "explanation": "This statement includes an exaggerated claim and a neutral behavioral description."
             }
         ]
     },
     {
         "id": 8,
-        "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Claim+8",
+        "image_url": "https://raw.githubusercontent.com/nooriak15/health_education/refs/heads/main/frontend/public/post-8.png",
         "interaction_type": "drag_drop",
         "claims": [
             {
@@ -226,33 +226,33 @@
                 "phrases": [
                     {
                         "text": "In just 5 days, I lost 10 pounds",
-                        "flag": "red-flag",
-                        "explanation": "This is a red flag because it makes exaggerated and unrealistic weight loss claims. (Rules 2, 11)",
-                        "correct_feedback": "Correct! Rapid weight loss claims are usually unsupported.",
-                        "incorrect_feedback": "Incorrect. This is a red flag due to its unrealistic timeframe."
+                        "flag": "red",
+                        "explanation": "This is a red flag because it promises a specific outcome in a short timeframe (Rule 2, 11).",
+                        "correct_feedback": "Correct! This is a red flag due to its unrealistic timeframe claim.",
+                        "incorrect_feedback": "Incorrect. This is a red flag because it is an exaggerated claim."
                     },
                     {
                         "text": "with this tea",
-                        "flag": "red-flag",
-                        "explanation": "This is a red flag because it ties an exaggerated claim to a specific product. (Rule 4 – product tie-in)",
-                        "correct_feedback": "Correct! Linking unrealistic claims to products is misleading.",
-                        "incorrect_feedback": "Incorrect. This is a red flag for product tie-ins."
+                        "flag": "red",
+                        "explanation": "This is a red flag because it ties a health promise directly to a product (Rule 4).",
+                        "correct_feedback": "Correct! This is a red flag because it promotes the tea with unrealistic claims.",
+                        "incorrect_feedback": "Incorrect. This is a red flag because it is a product tie-in."
                     },
                     {
                         "text": "helped me drink more water",
-                        "flag": "neutral-flag",
-                        "explanation": "This is neutral as it describes a plausible secondary effect. (Neutral – plausible effect)",
-                        "correct_feedback": "Correct! This is a neutral statement.",
-                        "incorrect_feedback": "Incorrect. This is a neutral statement."
+                        "flag": "neutral",
+                        "explanation": "This is neutral because it describes a plausible effect without exaggeration.",
+                        "correct_feedback": "Correct! This is a neutral statement as it is a plausible effect.",
+                        "incorrect_feedback": "Incorrect. This is a neutral statement because it is not misleading."
                     }
                 ],
-                "explanation": "Claims about rapid weight loss tied to a specific product are misleading, even if plausible secondary effects are mentioned."
+                "explanation": "This statement contains exaggerated claims and a plausible behavioral effect."
             }
         ]
     },
     {
         "id": 9,
-        "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Claim+9",
+        "image_url": "https://raw.githubusercontent.com/nooriak15/health_education/refs/heads/main/frontend/public/post-9.png",
         "interaction_type": "drag_drop",
         "claims": [
             {
@@ -260,26 +260,26 @@
                 "phrases": [
                     {
                         "text": "Fasting helped me regulate my blood sugar",
-                        "flag": "green-flag",
-                        "explanation": "This is a green flag because it describes an evidence-based biological mechanism. (Rule 1 – biological mechanism)",
-                        "correct_feedback": "Correct! This is an evidence-based statement.",
-                        "incorrect_feedback": "Incorrect. This is a green flag because it is supported by research."
+                        "flag": "green",
+                        "explanation": "This is a green flag because it specifies a biological mechanism (Rule 1).",
+                        "correct_feedback": "Correct! This is a green flag because it provides an evidence-based mechanism.",
+                        "incorrect_feedback": "Incorrect. This is a green flag due to its specific and evidence-based claim."
                     },
                     {
                         "text": "recommend checking with your doctor first",
-                        "flag": "green-flag",
-                        "explanation": "This is a green flag because it encourages consulting medical professionals. (Rule 8 – promotes professional help)",
-                        "correct_feedback": "Correct! Encouraging professional advice is constructive.",
-                        "incorrect_feedback": "Incorrect. This is a green flag."
+                        "flag": "green",
+                        "explanation": "This is a green flag because it promotes professional guidance (Rule 8).",
+                        "correct_feedback": "Correct! This is a green flag as it encourages professional advice.",
+                        "incorrect_feedback": "Incorrect. This is a green flag because it supports seeking professional help."
                     }
                 ],
-                "explanation": "Fasting has some evidence supporting blood sugar regulation, and consulting a doctor is a responsible recommendation."
+                "explanation": "This statement includes an evidence-based mechanism and encourages professional guidance."
             }
         ]
     },
     {
         "id": 10,
-        "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Claim+10",
+        "image_url": "https://raw.githubusercontent.com/nooriak15/health_education/refs/heads/main/frontend/public/post-10.png",
         "interaction_type": "drag_drop",
         "claims": [
             {
@@ -287,20 +287,20 @@
                 "phrases": [
                     {
                         "text": "resets your metabolism",
-                        "flag": "red-flag",
-                        "explanation": "This is a red flag because it makes a vague and unsupported health claim. (Rule 1 – vague mechanism)",
-                        "correct_feedback": "Correct! Claims about resetting metabolism are often misleading.",
-                        "incorrect_feedback": "Incorrect. This is a red flag because it lacks evidence."
+                        "flag": "red",
+                        "explanation": "This is a red flag because it uses vague mechanisms without evidence (Rule 1).",
+                        "correct_feedback": "Correct! This is a red flag due to its vague and unsupported claim.",
+                        "incorrect_feedback": "Incorrect. This is a red flag because it lacks a specific mechanism."
                     },
                     {
                         "text": "I love how it smells",
-                        "flag": "neutral-flag",
-                        "explanation": "This is neutral as it reflects a subjective preference rather than a health claim. (Neutral – subjective preference)",
-                        "correct_feedback": "Correct! This is a neutral statement.",
-                        "incorrect_feedback": "Incorrect. This is a neutral statement."
+                        "flag": "neutral",
+                        "explanation": "This is neutral because it expresses subjective preference and does not make a health claim.",
+                        "correct_feedback": "Correct! This is a neutral statement as it is subjective and not misleading.",
+                        "incorrect_feedback": "Incorrect. This is a neutral statement because it is not a health claim."
                     }
                 ],
-                "explanation": "Claims about resetting metabolism are unsupported, while personal preferences like smell are neutral."
+                "explanation": "This statement contains a vague health claim and a neutral subjective opinion."
             }
         ]
     }
