@@ -4,6 +4,8 @@ import NavBar from './components/NavBar';
 import HomePage from './pages/HomePage';
 import FeedPage from './pages/FeedPage';
 import AboutPage from './pages/AboutPage';
+import LearnPage from './pages/LearnPage';
+
 
 function App() {
   const onDragEnd = () => {
@@ -19,6 +21,7 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/feed" element={<FeedPage />} />
+              <Route path="/learn" element={<LearnPage />} />
               <Route path="/about" element={<AboutPage />} />
             </Routes>
           </main>
