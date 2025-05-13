@@ -47,10 +47,10 @@ const PostCard: React.FC<{
   };
 
   return (
-    <div className="post-card p-4 bg-white shadow rounded-md">
-      <h2>{claims[0].text}</h2>
-      <img src={image_url} alt={`Post ${id}`} className="w-full h-auto rounded-lg mb-4" />
-      <div className="phrases mt-4 space-y-2">
+    <div className="post-card p-6 bg-white shadow-lg rounded-lg border border-gray-100">
+      <h2 className="text-xl font-semibold text-gray-800 mb-4">{claims[0].text}</h2>
+      <img src={image_url} alt={`Post ${id}`} className="w-full h-auto rounded-lg mb-6 shadow-md" />
+      <div className="phrases mt-4 space-y-3">
         {claims[0].phrases.map((phrase, index) => (
           <div
             key={index}
@@ -59,15 +59,15 @@ const PostCard: React.FC<{
               const dragData = JSON.stringify(phrase);
               e.dataTransfer.setData('text', dragData);
             }}
-            className={`p-2 border rounded-md bg-gray-50 shadow ${
-              droppedItems[phrase.text] ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'
+            className={`p-3 border border-gray-200 rounded-md bg-white shadow-sm text-gray-700 hover:shadow-md transition-shadow ${
+              droppedItems[phrase.text] ? 'opacity-50 cursor-not-allowed' : 'cursor-move hover:bg-gray-50'
             }`}
           >
             {phrase.text}
           </div>
         ))}
       </div>
-      <div className="flex space-x-4 mt-4">
+      <div className="flex space-x-4 mt-6">
         <div className="flex-1">
           <DragZone zoneType="red-flag" onDrop={handleDrop}>
             {renderDroppedItems('red')}
@@ -87,14 +87,14 @@ const PostCard: React.FC<{
       {isAllDropped && !showEvaluation && (
         <button
           onClick={evaluateResults}
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 mt-4"
+          className="w-full px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 mt-6 font-medium shadow-sm transition-colors"
         >
           Submit
         </button>
       )}
       {showEvaluation && (
-        <div className="mt-4">
-          <p className="font-bold">
+        <div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
+          <p className="font-bold text-gray-800 mb-4">
             You got {Object.keys(droppedItems).filter(
               (itemText) =>
                 droppedItems[itemText] ===
@@ -103,9 +103,9 @@ const PostCard: React.FC<{
             out of {claims[0].phrases.length} correct.
           </p>
           {claims[0].phrases.map((phrase) => (
-            <div key={phrase.text} className="mt-2">
-              <p>
-                <strong>{phrase.text}:</strong>{' '}
+            <div key={phrase.text} className="mt-3 p-3 bg-white rounded-md shadow-sm">
+              <p className="text-gray-700">
+                <strong className="text-gray-900">{phrase.text}:</strong>{' '}
                 {droppedItems[phrase.text] === phrase.flag
                   ? `Correct - ${phrase.explanation}`
                   : `Incorrect - ${phrase.explanation}`}
@@ -114,7 +114,7 @@ const PostCard: React.FC<{
           ))}
           <button
             onClick={resetEvaluation}
-            className="mt-4 px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
+            className="w-full mt-6 px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 font-medium shadow-sm transition-colors"
           >
             Try Again
           </button>
